@@ -1,0 +1,23 @@
+
+<div class="mx-auto w-50 p-3 row">
+    <% if flash[:error] %>
+        <p class="alert alert-danger" role="alert">
+            <%= flash[:error] %>
+        </p>
+    <% end %>
+    <form method="POST" class="width" action='/add'>
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type='text' name='title' class ='form-control' placeholder="TITLE">
+        </div>
+        <div class="mb-3">
+            <label for='description'>Description:</label><br>
+            <textarea name="description" rows="5" cols="65" placeholder="DESCRIPTION">
+
+            </textarea>
+        </div>
+        <div class="mb-3">
+            <button type='submit' class='btn btn-primary'> SUBMIT</button>
+        </div>
+    </form>
+</div>

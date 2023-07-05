@@ -1,0 +1,28 @@
+
+<div class="mx-auto w-50 p-3 row">
+    <h5 class="mx-auto w-25 text-center">login</h5>
+    <% if flash[:success] %>
+        <p class="alert alert-success" role="alert">
+            <%= flash[:success] %>
+        </p>
+    <% end %>
+    <% if flash[:error] %>
+        <div class="alert alert-danger" role="alert">
+            <%= flash[:error] %>
+        </div>
+    <% end %>
+    <form method="POST" class="width" action='/login'>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type='email' name='email' class ='form-control' placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for='password'>Password:</label><br>
+            <input type='password' name='password' class ='form-control'>
+        </div>
+        <div class="mb-3">
+            <button type='submit' class='btn btn-primary'> SUBMIT</button>
+        </div>
+        <div class="mb-3"><a href= 'forgotpw.php'>Forgot Password?</a></div>
+    </form>
+</div>
